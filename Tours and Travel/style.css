@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Roboto:wght@100;300;400;900&display=swap');
+/* rgb(11, 178, 244) */
+
+/* scrollbar styling */
+::-webkit-scrollbar-track {
+    background: #333;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(11, 178, 244);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* scrollbar styling end*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+}
+h2{
+    height: 10%;
+    color: skyblue;
+}
+h2 span{
+    color: #333;
+}
+.icons{
+    color: goldenrod;
+    margin: 10px 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    position: fixed;
+    top: 1rem;
+    left: 5%;
+    color: rgb(11, 178, 244);
+    font-size: 2rem;   
+    padding: 0 2%; 
+    background: rgba(255, 255,255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0,0, 0.7);
+    z-index: 2;
+}
+header:hover{
+    background-color: rgba(0, 0,0, 0.9);
+}
+header:hover nav a{
+    color: white;
+}
+.logo:hover{
+    color: rgb(7, 141, 194);
+    cursor: pointer;
+}
+nav{
+    width: 40%;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+}
+nav ul li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+        
+}
+nav ul li a:hover{
+    color: skyblue;
+}
+header span{
+    width: 0;
+    display: none;
+}
+
+
+/* home section  */
+#home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+.left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+#home .left h1,h2{
+    color: rgb(11, 178, 244);
+    font-size: 4.5rem;
+}
+#home .left p{
+    color: white;
+    font-size: 1.1rem;
+    padding: 0 20px;
+    border-left: 2px solid grey;
+    text-align: justify;
+}
+.right{
+    width: 25%;
+    z-index: 1;
+    text-align: center;
+}
+.right form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    padding: 2% 3%;
+    border-radius: 5px;
+    box-shadow: 0 0 0.7rem rgba(0, 0,0, 0.7) inset;
+}
+.right form h3{
+    color: #333;
+    font-size: 1.5rem;
+}
+.right form label{
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: skyblue;
+}
+.right form label:hover{
+    color: rgb(7, 141, 194);
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    row-gap: 5px;
+    margin-bottom: 10px;
+}
+form input{
+    width: 90%;
+    padding: 2px 10px;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 0.3rem rgba(0, 0,0, 0.7) inset;
+}
+form input:hover{
+    box-shadow: 0 0 0.3rem rgb(11, 178, 244);
+    border: 2px solid rgb(11, 178, 244);
+}
+form input::placeholder{
+    color: grey;
+}
+input[type= submit]{
+    color: skyblue;
+    font-weight: 700;
+    align-self: self-start;
+    width: 20%;
+    border-radius: 5px;
+    text-align: center;
+    padding: 2px 0;
+}
+input[type= submit]:hover{
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 0 0.3rem rgba(0, 0,0, 0.7);
+}
+
+/* about section css  */
+#about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+.aboutContent{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+} 
+.aboutLeft{
+    width: 40%;
+}
+.aboutLeft img{
+    width: 100%;
+    object-fit: cover;
+}
+.aboutRight{
+    width: 40%;
+}
+.aboutRight h3{
+    color: rgb(11, 178, 244);
+    font-size: 3rem;
+    font-weight: 700;
+}
+.aboutRight p{
+    color: grey;
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+.read{
+    color: rgb(11, 178, 244);
+    border: 2px solid rgb(11, 178, 244);
+    width: 100px;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.read:hover{
+    cursor: pointer;
+    background-color: rgb(11, 178, 244);
+    color: white;
+
+}
+.touch{
+    color: white;
+    background-color: rgb(11, 178, 244);
+    border: 2px solid rgb(11, 178, 244);
+    width: 100px;
+    padding: 5px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.touch:hover{
+    background-color: white;
+    color: rgb(11, 178, 244);
+}
+
+
+/* feature section css  */
+#feature{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 3%;
+}
+.featureContent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.featureBox{
+    width: 20%;
+    text-align: center;
+    box-shadow: 0 0 .3rem rgb(11, 178, 244),
+                0 0 .3rem rgb(11, 178, 244);
+    padding-bottom: 10px;
+    border-radius: 5px;
+    /* overflow: hidden; */
+}
+.featureBox img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+
+}
+.featureBox h3{
+    color: rgb(11, 178, 244);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.featureBox p{
+    text-align: justify;
+    color: grey;
+    padding: 0 5px;
+}
+.checkout{
+    background-color: rgb(7, 141, 194);
+    border: 2px solid rgb(7, 141, 194);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 2px 4px;
+    text-align: center;
+}
+.checkout:hover{
+    background-color: #fff;
+    color: rgb(7, 141, 194);
+    cursor: pointer;
+}
+/* gallery section css  */
+
+#gallery{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0 3% 0;
+}
+.galleryContent{
+    width: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+    grid-gap: 1rem;
+}
+.galleryContent img{
+    height: 170px;
+    box-shadow: 0 0 .5rem black;
+    border-radius: 5px;
+    transform: scale(1);
+    filter: grayscale(1);
+    transition: all .3s ease-in-out;
+}
+.galleryContent img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+/* review section css  */
+#review{
+    height: 100vh;
+    background: url(images/feature2.jpg), linear-gradient(#0098a1, #0098a1) no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5% 0 2% 0;
+}
+#review h2{
+    color: yellow;
+}
+#review h2 span{
+    color: white;
+}
+.reviewContent{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reviewBox{
+    width: 30%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 1rem white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+.reviewBox img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: start;
+    border-radius: 50%;
+    border: 5px solid rgb(203, 199, 199);
+    margin-top: -50px;
+}
+.reviewBox p{
+    margin: 10px 0;
+    color: grey;
+}
+.reviewBox h3{
+    color: rgb(11, 178, 244);
+}
+
+/* contact section css  */
+#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+}
+.map{
+    width: 100%;
+    margin-top: 5vh;
+}
+.contactInfo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+}
+.infoLeft{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10%;
+}
+.infoLeft span{
+    color: grey;
+}
+.infoBoxTop{
+    display: flex;
+    gap: 10px;
+    justify-content: start;
+}
+.infoLeft i{
+    color: rgb(11, 178, 244);
+}
+.infoRight{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.infoRight input,textarea{
+    border-radius: 0;
+    border: 2px solid rgb(11, 178, 244);
+}
+.infoRight h3{
+    font-size: 3rem;
+    color: rgb(11, 178, 244);
+}
+.infoRight form{
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.infoFormTop{
+    display: flex;
+    gap: 10px;
+}
+.infoRight textarea{
+    width: 100%;
+    height: 50%;
+    resize: none;
+}
+.infoRight input[type=submit]{
+    width: 30%;
+    text-align: center;
+}
+
+/* footer css  */
+
+footer{
+    background: url(images/bg3.jpg), linear-gradient(rgba(0,0,0,.8) , rgba(0,0,0,.8)) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.fTop{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding-bottom: 20px;
+}
+.fTop input{
+    border-radius: 0;
+}
+.fTop h3{
+    font-size: 3rem;
+}
+.fTop p{
+    width: 70%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.fTop .subscribe{
+    display: flex;
+    gap: 10px;
+}
+.fTop .subscribe input[type=email]{
+    width: 400px;
+    height: 40px;
+    background: rgba(255, 255, 255, .3);
+}
+.fTop .subscribe input[type=email]:hover{
+    background: transparent;
+    color: white;
+}
+.fTop .subscribe input[type=submit]{
+    width: 200px;
+    height: 40px;
+    background-color: rgb(11, 178, 244);
+}
+.fTop .subscribe input[type=submit]:hover{
+    background-color: transparent;
+    color: white;
+}
+.fBottom{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.fBottom span{
+    color: rgb(11, 178, 244);
+}
+.fBottom .fIcons{
+    display: flex;
+    gap: 30px;
+}
+.fIcons i{
+    border: 2px solid white;
+    font-size: 1.3rem;
+    height: 2.6rem;
+    width: 2.6rem;
+    text-align: center;
+    line-height: 2.6rem;
+    border-radius: 0%;
+    transition: all .1s;
+}
+.fIcons i:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(11, 178, 244);
+    border-color: rgb(11, 178, 244);
+}

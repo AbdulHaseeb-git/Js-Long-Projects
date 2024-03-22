@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@100;300;400;900&display=swap');
+/* rgb(218, 9, 44) */
+/* scrollbar styling */
+::-webkit-scrollbar-track {
+    background: #333;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(238, 130,238);
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* scrollbar styling end*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+*::selection{
+    background-color: rgb(231, 23, 33);
+    color: white;
+}
+h2{
+    font-size: 3rem;
+    font-weight:900;
+    color: rgb(218, 9, 44);
+}
+h3{
+       color: rgb(218, 9, 44);
+}
+span{
+    color: grey;
+}
+a{
+    color: white;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgba(238, 130,238,0.9),rgba(238, 130,238,0.9)), url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+
+header{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 1px 1px 5px black;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+}
+/* header.full{
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    border-radius: 0;
+} */
+.logo{
+    color: violet;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.logo i{
+    color:rgb(218, 9, 44);
+    padding-right:5px ;
+}
+header .fa-bars{
+    display: none;
+}
+header .fa-bars.active{
+    display: block;
+}
+header .fa-times{
+    display: none;
+}
+header .fa-times.active{
+    display: block;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li a{
+    color: rgb(218, 9, 44);
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0 10px;
+}
+/* nav ul li a.active{
+    color: rgba(218, 9, 44, 0.4);
+} */
+#home{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.homeTop{
+    text-align: center;
+    color: white;
+}
+.homeTop h1{
+    font-size: 4rem;
+    font-weight: 600;
+    text-shadow: 5px 5px 20px black;
+}
+.homeTop p{
+    margin: 20px 0;
+}
+.homeTop a button{
+    color: white;
+    font-size: 1rem;
+    width: 150px;
+    border: none;
+    background-color: rgb(218, 9, 44);
+    border-radius: 20px;
+    padding: 5px 0;
+    letter-spacing: 0;
+    box-shadow: 5px 5px 20px black;
+    transition: all 0.5s;
+}
+.homeTop a:hover button{
+
+    letter-spacing: 1.3px;
+}
+
+.homeBottom{
+    display: flex;
+    width: 70%;
+    column-gap: 20px;
+}
+.homeBottom .box{
+    height: 200px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+    box-shadow: 5px 5px 10px grey;
+}
+.homeBottom .box p{
+    text-align: center;
+    color: grey;
+}
+.homeBottom .box i{
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5rem;
+    background-color: violet;
+    color: white;
+    font-size: 3rem;
+    border-radius: 50%;
+}
+.box:hover i{
+    background-color: rgb(218, 9, 44);
+}
+#home::before{
+    content: '';
+    position: absolute;
+    bottom: -25%;
+    left: 50%;
+    transform: translate(-50%,15%);
+    width: 125%;
+    border-top: 70vh solid white;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+/* this is about section  */
+
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 50px;
+}
+.topAbout{
+    text-align: center;
+    margin: 20px 0;
+    height: 10%;
+}
+.bottomAbout{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+.leftAbout{
+    width: 45%;
+}
+.leftAbout h3{
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+.leftAbout p{
+    color: grey;
+    text-align: justify;
+    margin: 20px 0;
+}
+.leftAbout button{
+    background-color:  rgb(218, 9, 44);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px ;
+    transition: all 0.5s;
+}
+.leftAbout a:hover button{
+
+    letter-spacing: 1.3px;
+}
+.rightAbout{
+    width: 45%;
+}
+.rightAbout img{
+    width: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* teacher section css  */
+#teacher{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.teacherTop{
+    text-align: center;
+    height: 10vh;
+}
+.teacherBottom{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    margin: 0 auto;
+    column-gap: 20px;
+}
+.teacherBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 25%;
+    height: 50vh;
+    border: 10px solid rgba(128, 128, 128, 0.2);
+    box-shadow: 0 0 5px black;
+    position: relative;
+}
+
+.teacherBox img{
+    width: 70%;
+    height: 30vh;
+    object-fit: cover;
+    filter: grayscale();
+    transition: filter .2s;
+}
+.teacherBox:hover img{
+    filter: grayscale(0);
+}
+.teacherBox:hover::before{
+    width: 0%;
+}
+.teacherIcons{
+    padding: 5px 0;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.teacherIcons i{
+    font-size: 1.2rem;
+    padding: 5px 5px;
+    color: rgb(218, 9, 44);
+}
+.teacherIcons i:hover{
+    color: violet;
+}
+
+/* course section css  */
+#course{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courseTop{
+    width: 100%;
+    margin-top:7.5%;
+    text-align: center;
+}
+.courseBottom{
+    width: 85%;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
+    grid-gap: 80px;
+}
+.courseBox{
+    height: 270px;
+    box-shadow: 0.3rem 0.3rem 0 .1rem violet,
+                .5rem .5rem .5rem rgb(0, 0, 0, .7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.courseBox i{
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    color: white;
+    background-color: rgb(218, 9, 44);
+    border-radius: 50%;
+    margin-top: -3rem;
+    font-size: 1.7rem;
+    border-left: .4rem solid rgb(218, 9, 44);
+    border-right: .4rem solid rgb(218, 9, 44);
+    box-shadow: 0 0 0 1rem white inset;
+}
+/* teacher section css  */
+#review{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+.reviewTop{
+    width: 100%;
+    text-align: center;
+}
+.reviewBottom{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reviewBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding: 0 15px;
+    box-shadow: 0 0.3rem .5rem rgba(0, 0, 0, .8);
+}
+.reviewBox img{
+    width: 6rem;
+    height: 6rem;
+    margin-top: -4rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 10px solid rgb(218, 9, 44);
+    border-left: 10px solid violet;
+    border-bottom: 10px solid violet;
+}
+.reviewBox p{
+    text-align: justify;
+}
+.reviewBox i{
+    color: rgb(218, 9, 44);
+}
+
+/* teacher section css  */
+#contact{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(39, 15, 15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 7%;
+}
+.contactBottom{
+    display: flex;
+    justify-content: space-between;
+}
+.contactLeft{
+    width: 40%;
+}
+.contactLeft img{
+    width: 80%;
+    border-radius: 50%;
+    border: 20px solid rgb(218, 9, 44);
+}
+.contactRight{
+    width: 50%;
+    text-align: center;
+}
+.contactRight form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+form input{
+    width: 100%;
+    border-radius: 1.25rem;
+    height: 2.5rem;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    margin-bottom: 10px;
+    color: rgb(218, 9, 44);
+}
+form input[type = submit]{
+    margin-top: 10px;
+    width: 200px;
+    align-self: flex-start;
+    color: white;
+    background-color: rgb(218, 9, 44);
+}
+form textarea{
+    width: 100%;
+    border-radius: 1.25rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: rgb(218, 9, 44);
+}

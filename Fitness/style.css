@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;700&family=Inter:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Roboto:wght@100;300;400;900&display=swap');
+/* $pink : #E6022D; */
+
+
+/* scrollbar styling */
+::-webkit-scrollbar-track {
+    background: #333;
+}
+::-webkit-scrollbar-thumb {
+    background: #E6022D;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+/* scrollbar styling end*/
+
+*{
+    font-family: 'Exo 2', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    margin: 0;padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+}
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 700;
+}
+header{
+    background: transparent;
+    width: 95%;
+    position: fixed;
+    top: 30px;
+    left: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0;
+    z-index: 1;
+    transition: all 1s;
+}
+header.full{
+    background-color: rgb(51, 50, 50);
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 20px;
+
+}
+header a{
+    color: white;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+header ul li{
+    padding: 10px 10px 10px 10px;
+}
+header ul li:hover{
+    background-color: #E6022D;
+}
+header .logo{
+    font-size: 2rem;
+
+}
+.logo a span{
+    color:  #E6022D;
+}
+#home{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)) , url(images/bg1.jpg);
+    background-size: cover; 
+    background-attachment: fixed;
+    background-blend-mode: multiply;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.homeContent{
+    display: grid;
+    place-items: center;
+    row-gap: 30px;
+}
+#home h1{
+    color: white;
+    font-size: 8rem;
+    font-weight: 700;
+}
+#home p{
+    color: #E6022D;
+    font-size: 6rem;
+    font-weight: 700;
+}
+#home a{
+    color: #E6022D;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #E6022D;
+    padding: 10px;
+}
+#home a:hover{
+    color: white;
+    background: #E6022D;
+
+}
+.homeIcons{
+    width: 100%;
+    font-size: 3rem;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #E6022D;
+    padding: 50px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: 0;
+}
+.homeIcons i{
+    margin-right: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color .5s;
+}
+.homeIcons i:hover{
+    color: rgb(51, 50, 50);
+}
+/* feature section css */
+#features{
+    height: 100vh;
+    background: #E6022D;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.featuresContent{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: 0%;
+}
+.featuresBox{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transform: translateY(0);
+    box-shadow: 0 0 10px black;
+    transition: transform 0.5s;
+}
+.featuresBox:hover{
+    transform: translateY(-5%);
+}
+.featuresBox img{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+    filter:opacity(0.4);
+}
+.featuresBox:hover img{
+    filter: opacity(1);
+}
+.featuresBox h3{
+    font-size: 2rem;
+    color: #E6022D;
+}
+.featuresBox p{
+    font-size: 1.5rem;
+    color: grey;
+    text-align: justify;
+    padding: 0 10px;
+}
+.featuresBox a{
+    background: #E6022D;
+    color: white;
+    font-size: 2rem;
+    border: 2px solid #E6022D;
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.featuresBox a:hover{
+    color: #E6022D;
+    background: white;
+    border-radius: 0px;
+}
+
+/* about css */
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;   
+    padding-top: 5%;
+}
+.aboutLeft{
+    width: 50%;
+    height: 90%;
+    display: grid;
+    place-items: center;
+}
+.aboutLeft img{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: grayscale();
+}
+.aboutLeft img:hover{
+    filter: grayscale(0);
+}
+.aboutRight{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.aboutRight h2{
+    font-size: 4rem;
+    color: #E6022D;
+    margin: 30px 0;
+}
+.aboutRight p{
+    text-align: justify;
+    color: grey;
+    font-size: 1.7rem;
+    padding-right :30px;
+}
+.aboutRight h3{
+    font-size: 3rem;
+    color: #E6022D;
+    margin: 30px 0;
+
+}
+.aboutRight .gymIncludes{
+    padding-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
+    gap: 10px;
+    font-size: 2rem;
+}
+.aboutRight .gymIncludes a{
+    color: white;
+    background: #E6022D;
+    text-align: center;
+    padding: 10px 0;
+    border: 2px solid #E6022D;
+    transition: all .4s;
+}
+.gymIncludes a:hover{
+    background: white;
+    color: #E6022D;
+
+}
+
+/* gallery css starts  */
+
+#gallery{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5%;
+    background-color: rgb(176, 173, 173);
+}
+#gallery .heading{
+    color: #E6022D;
+}
+.galleryContent{
+    width: 70%;
+    padding: 2% 0;
+    overflow: hidden;
+    display: grid;
+    row-gap: 40px;
+    column-gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(210px, 1fr));
+}
+.galleryBox{
+    
+    position: relative;
+}
+.galleryBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.galleryButton{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.7);
+    display: grid;
+    place-items: center;
+    transition: height 0.5s ease-in-out;
+}
+.gButton{
+    color: white;
+    border: 2px solid #E6022D;
+    background: transparent;
+    font-size: 1.5rem;
+    padding: 5px;
+    display: none;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    transition: all 0.2s;
+}
+.galleryBox:hover .galleryButton  {
+    height: 100%;
+}
+.galleryBox:hover .gButton{
+    display: block;
+}
+.gButton:hover{
+    background: #E6022D;
+}
+
+/* contact section css starts  */
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) ,url(images/bg2.jpg);
+    background-size: cover;
+}
+.contactLeft{
+    width: 45%;
+    height: 100vh;
+    padding: 5%;
+}
+.contactLeft form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactLeft form input{
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    background: transparent;
+    border: 2px solid #E6022D;
+    color: white;
+}
+.contactLeft form input::placeholder{
+    color: white;
+}
+.contactLeft form input:hover{
+    background: #E6022D;
+}
+.contactLeft form textarea{
+    width: 100%;
+    height: 150px;
+    background: #E6022D;
+    color: white;
+    padding: 10px 10px;
+    resize: none;
+}
+.contactLeft form textarea::placeholder{
+    color: white;
+}
+.contactLeft form textarea:hover{
+    background: transparent;
+    text-transform: none;
+}
+.contactLeft form input[type=submit]{
+    background: #E6022D;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.contactLeft form input[type = submit]:hover{
+    background: transparent;
+    cursor: pointer;
+}
+.contactRigth{
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    align-items: self-end;
+    justify-content: center;
+}
+.contactRigth img{
+    width: 80%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+/* footer css */
+#footer{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 30rem;
+    background: #333;
+}
+.footerTop{
+    width: 80%;
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 2rem;
+}
+.footerLeft{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.footerLeft .logo a{
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+}
+.footerLeft .logo span{
+    color: #E6022D;
+}
+.footerIcons{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    font-size: 2rem;
+    color: #E6022D;
+}
+.footerIcons a{
+    position: relative;
+}
+.footerIcons a::after{
+    content: attr(data-text);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: italic;
+    position: absolute;
+    top: 0.5rem;
+    left: 4rem;
+    letter-spacing: .1rem;
+}
+.footerCenter{
+    display: grid;
+    align-items: center;
+}
+.footerInfo{
+    height: 80%;
+    width: 5rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    text-align: center;
+    background: #E6022D;
+}
+.footerCenter a{
+    color: white;
+    font-size: 2rem;
+    position: relative;
+}
+.footerCenter a::after{
+    content: attr(data-text);
+    font-size: 1.2rem;
+    position: absolute;
+    top: .5rem;
+    left: 4rem;
+    letter-spacing: .1rem;
+    font-style: italic;
+    width: 20rem;
+}
+.footerRight{
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+}
+.footerRight h1{
+    color: #E6022D;
+    font-size: 3rem;
+}
+.footerRight p{
+    color: white;
+    font-size: 1.5rem;
+}
+.footerRight input{
+    height: 4rem;
+}
+.footerRight input[type = email]{
+    background: transparent;
+    border: 2px solid #E6022D;
+    padding: 0 10px;
+    width: 100%;
+}
+.footerRight input[type = email]:hover{
+    background: #E6022D;
+    color: white;
+}
+.footerRight input[type= email]::placeholder{
+    color: white;
+}
+.footerRight input[type = submit]{
+    color: white;
+    background: #E6022D;
+    width: 10rem;
+    border: 2px solid #E6022D;
+}
+.footerRight input[type = submit]:hover{
+    background: transparent;
+}
+.footerBottom{
+    text-align: center;
+    line-height: 3rem;
+    color: #E6022D;
+    height: 3rem;
+    
+}
+.footerBottom span{
+    color: white;
+}
